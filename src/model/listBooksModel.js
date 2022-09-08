@@ -15,6 +15,11 @@ class ListBooks extends Model {
         let sql = `DELETE FROM books WHERE name = '${name}'`
         await this.querySQL(sql);
     }
+
+    async findByName(name) {
+        let sql = `SELECT * FROM books WHERE name = '${name}'`;
+        return await this.querySQL(sql);
+    }
 }
 
 module.exports = ListBooks;

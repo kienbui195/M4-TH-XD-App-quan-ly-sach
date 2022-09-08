@@ -26,6 +26,10 @@ router.get('/delete' , (req, res, next) => {
         console.log(err.message)
     })
 })
+
+router.get('/details', (req, res, next) => {
+    controller.showDetails(req, res, next)
+})
 module.exports = router;
 
 

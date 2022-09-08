@@ -31,7 +31,7 @@
     <% data.forEach((item, index) => { %>
     <tr>
         <th scope="col"><%= index + 1 %></th>
-        <th scope="col"><a href="/details" style="text-decoration: none"><%= item.name %></a></th>
+        <th scope="col"><a href="/details?name=<%= item.name %>" style="text-decoration: none"><%= item.name %></a></th>
         <th scope="col"><%= item.price %></th>
         <th scope="col"><%= item.quantity %></th>
         <th scope="col"><%= item.author %></th>

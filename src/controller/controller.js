@@ -27,6 +27,12 @@ class Controller {
         await this.controller.deleteBook(name);
         res.redirect('/');
     }
+
+    async showDetails(req, res, next) {
+        let name = req.query.name;
+        let data = await this.controller.findByName(name)
+        res.render('detail', {data: data[0]})
+    }
 }
 
 module.exports = Controller;
